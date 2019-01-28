@@ -9,8 +9,13 @@
 import UIKit
 import CoreML
 import Vision
+import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    
+    let wikipediaURl = "https://en.wikipedia.org/w/api.php"
     
     let imagePicker = UIImagePickerController()
     
@@ -19,6 +24,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
@@ -63,9 +69,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         
         let request = VNCoreMLRequest(model: model) { (request, error) in
-            let classification = request.results?.first as? VNClassificationObservation
+            guard let classification = request.results?.first as? VNClassificationObservation else {
+                fatalError("Could not classify image")
+            }
             
             self.navigationItem.title = classification?.identifier.capitalized
+            self.requestInfo(flowerName: classification.identifier)
+    
         }
         
         let handler = VNImageRequestHandler(ciImage: image)
@@ -76,6 +86,38 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             print(error)
         }
     }
+    
+    
+    func requestInfo(flowerName: String){
+        
+        let parameters : [String:String] = [
+            "format" : "json",
+            "action" : "query",
+            "prop" : "extracts",
+            "exintro" : "",
+            "explaintext" : "",
+            "titles" : flowerName,
+            "indexpageids" : "",
+            "redirects" : "1",
+            ]
+
+        
+        Alamofire.request(wikipediaURl, method: .get, parameters: parameters).responseJSON { (response) in
+            if response.result.isSuccess {
+                print("Got the wikipedia info")
+                print(response.result)
+                
+                let flowerJSON: JSON = JSON(response.result.value)
+                
+                let pageid = flowerJSON["query"]["pageids"][0].stringValue
+                
+                let flowerDescription = flowerJSON["query"]["pages"][pageid]["extract"].stringValue
+                
+                self.label.text = flowerDescription
+            }
+        }
+    }
+    
     
     
 }
