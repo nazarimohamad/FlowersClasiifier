@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E5E75ABE220BD20C385DECB /* Pods_FlowersClasiifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C8E7195FDB3C6C1A9E6A78E /* Pods_FlowersClasiifier.framework */; };
 		688B922C21FE26DE001C41C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B922B21FE26DE001C41C4 /* AppDelegate.swift */; };
 		688B922E21FE26DE001C41C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B922D21FE26DE001C41C4 /* ViewController.swift */; };
 		688B923121FE26DE001C41C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 688B922F21FE26DE001C41C4 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C8E7195FDB3C6C1A9E6A78E /* Pods_FlowersClasiifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlowersClasiifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F79F297A43BC3DD10057EB6 /* Pods-FlowersClasiifier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowersClasiifier.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlowersClasiifier/Pods-FlowersClasiifier.debug.xcconfig"; sourceTree = "<group>"; };
 		688B922821FE26DE001C41C4 /* FlowersClasiifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowersClasiifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		688B922B21FE26DE001C41C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		688B922D21FE26DE001C41C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		688B923221FE26EF001C41C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		688B923521FE26EF001C41C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		688B923721FE26EF001C41C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69C40233421AD22F79CBC9BE /* Pods-FlowersClasiifier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowersClasiifier.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlowersClasiifier/Pods-FlowersClasiifier.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E5E75ABE220BD20C385DECB /* Pods_FlowersClasiifier.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				688B922A21FE26DE001C41C4 /* FlowersClasiifier */,
 				688B922921FE26DE001C41C4 /* Products */,
+				D368EF056D6263842F3A1267 /* Pods */,
+				D823FAC6E9713E831724EA44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = FlowersClasiifier;
 			sourceTree = "<group>";
 		};
+		D368EF056D6263842F3A1267 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F79F297A43BC3DD10057EB6 /* Pods-FlowersClasiifier.debug.xcconfig */,
+				69C40233421AD22F79CBC9BE /* Pods-FlowersClasiifier.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D823FAC6E9713E831724EA44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C8E7195FDB3C6C1A9E6A78E /* Pods_FlowersClasiifier.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 688B923A21FE26EF001C41C4 /* Build configuration list for PBXNativeTarget "FlowersClasiifier" */;
 			buildPhases = (
+				2B1B1109E213C00CCC026B3A /* [CP] Check Pods Manifest.lock */,
 				688B922421FE26DE001C41C4 /* Sources */,
 				688B922521FE26DE001C41C4 /* Frameworks */,
 				688B922621FE26DE001C41C4 /* Resources */,
+				1A7E3214ED7D01DE0497EAD2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A7E3214ED7D01DE0497EAD2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FlowersClasiifier/Pods-FlowersClasiifier-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlowersClasiifier/Pods-FlowersClasiifier-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B1B1109E213C00CCC026B3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlowersClasiifier-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		688B922421FE26DE001C41C4 /* Sources */ = {
@@ -280,6 +355,7 @@
 		};
 		688B923B21FE26EF001C41C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F79F297A43BC3DD10057EB6 /* Pods-FlowersClasiifier.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +373,7 @@
 		};
 		688B923C21FE26EF001C41C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69C40233421AD22F79CBC9BE /* Pods-FlowersClasiifier.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
