@@ -30,6 +30,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
         imagePicker.sourceType = .camera
+        
+        
+        print("Thi is testing model problem")
     }
 
     
